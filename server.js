@@ -1,6 +1,6 @@
 import fs from "fs";
 
-fs.renameSync("tmp/db.json", "/tmp/db.json");
+fs.copyFileSync("./tmp/db.json", "/tmp/db.json");
 const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("/tmp/db.json");
